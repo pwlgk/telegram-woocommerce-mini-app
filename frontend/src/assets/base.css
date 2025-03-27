@@ -1,0 +1,60 @@
+/* frontend/src/assets/base.css */
+:root {
+    /* Дефолтные значения переменных Telegram */
+    --tg-theme-bg-color: #ffffff;
+    --tg-theme-text-color: #222222;
+    --tg-theme-hint-color: #999999;
+    --tg-theme-link-color: #2481cc;
+    --tg-theme-button-color: #5288c1;
+    --tg-theme-button-text-color: #ffffff;
+    --tg-theme-secondary-bg-color: #f1f1f1;
+    /* ... добавьте другие переменные при необходимости */
+  }
+  
+  /* Стили для темной темы (если Telegram передаст class="theme-dark") */
+  body.theme-dark {
+    /* Переопределяем переменные для темной темы */
+    --tg-theme-bg-color: #18222d;
+    --tg-theme-text-color: #ffffff;
+    --tg-theme-hint-color: #778087;
+    --tg-theme-link-color: #62bcf9;
+    --tg-theme-button-color: #2ea6ff;
+    --tg-theme-button-text-color: #ffffff;
+    --tg-theme-secondary-bg-color: #232e3c;
+  }
+  
+  
+  /* Базовые сбросы и стили */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* font-weight: normal; */ /* Сброс жирности может быть слишком агрессивным */
+  }
+  
+  body {
+    min-height: 100vh;
+    color: var(--tg-theme-text-color);
+    background: var(--tg-theme-bg-color);
+    transition: color 0.3s, background-color 0.3s;
+    line-height: 1.6;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  #app {
+    /* Можно добавить стили для #app, если #app-container не используется */
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--tg-theme-link-color);
+    transition: 0.4s;
+  }
+  
+  /* ... другие базовые стили ... */
